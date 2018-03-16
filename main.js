@@ -7,13 +7,11 @@ document.getElementById("btnRemove").addEventListener("click", removeCheckbox);
 // check all elements
 function getCheckedAll(e) {
   let ch = document.getElementsByClassName("checkbox");
-  if (e.target.checked) {
-    for (let i = 0; i < ch.length; i++) {
+  for (let i = 0; i < ch.length; i++) {
+    if (e.target.checked) {
       ch[i].checked = true;
       ch[i].parentElement.style.background = "#444";
-    }
-  } else {
-    for (let i = 0; i < ch.length; i++) {
+    } else {
       ch[i].checked = false;
       ch[i].parentElement.style.background = "";
     }
